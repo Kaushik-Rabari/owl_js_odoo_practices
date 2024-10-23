@@ -5,7 +5,7 @@ class Task extends Component {
         <li t-attf-style="background-color:#{state.color}" class="d-flex align-items-center justify-content-between border p-3 mb-2">
             <div t-if="state.isEditing" class="d-flex align-items-center flex-grow-1 me-2">
                 <input type="text" class="form-control me-2" t-model="state.name"/>
-                <input type="color" style="width:60px" class="form-control-lg form-control-color border-0 bg-white m-0" id="color" title="Choose your color" t-model="state.name"/>
+                <input type="color" style="width:60px" class="form-control-lg form-control-color border-0 bg-white m-0" id="color" title="Choose your color" t-model="state.color"/>
             </div>
             <div t-if="!state.isEditing" class="form-check form-switch fs-5">
                 <input class="form-check-input" type="checkbox" value="" t-att-checked="state.isCompleted" t-att-id="state.id" t-on-click="toggleTask" t-model="state.isCompleted"/>
